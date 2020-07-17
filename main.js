@@ -66,7 +66,8 @@ var movedFrom = "";
 			return obj.id != 'canvas-'+pos
 		  })
 		  templateList = filterd;
-		  parent.style.backgroundColor = '#FAFBFB'
+		  parent.style.backgroundColor = '#1B2A47'
+		  parent.style.border = '1px dashed #FAFCFB'
 
 		  		  
      }
@@ -78,7 +79,8 @@ var movedFrom = "";
 {
  var childDiv = cParent[i];
  cParent[i].innerHTML=""
- cParent[i].style.backgroundColor = '#FAFBFB'
+ cParent[i].style.backgroundColor = '#1B2A47'
+ cParent[i].style.border = '1px dashed #FAFCFB'
  
 }
 	 clearBtn.style.display = 'none';
