@@ -22,8 +22,7 @@ var movedFrom = "";
 		clearBtn.style.display= 'block';
 		var gridWrapper = document.getElementById('gridStack');
 		gridWrapper.innerHTML = "";
-		for( chart in templateList){
-			var grid = GridStack.init();			
+		for( chart in templateList){			
 			var gridItem = document.createElement('div');
 			gridItem.className ="grid-stack-item ui-draggable ui-resizable";
 			gridItem.setAttribute('data-gs-x', templateList[chart].gridMap.gsX )
@@ -41,7 +40,7 @@ var movedFrom = "";
 
 				gridWrapper.append(gridItem)
 				gridItem.append(itemContent)
-				
+				var grid = GridStack.init();
 				grid.addWidget(gridItem, [templateList[chart].gridMap.gsX, templateList[chart].gridMap.gsY, templateList[chart].gridMap.gsWidth, templateList[chart].gridMap.gsHeight, false])
 
 			draw(itemContent,templateList[chart].data,'chartTemplate-')
