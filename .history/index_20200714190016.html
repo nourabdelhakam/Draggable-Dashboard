@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag & Drop</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+
+
+    <link rel="stylesheet" href="node_modules/gridstack/dist/gridstack.min.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- <nav> -->
+        <nav>
+            <div class="logo">
+                <h4>Dashboard</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+      <!-- </nav> end of nav -->
+
+      <section>
+          <h3>Analytics Dashboard</h3>
+          <div class="container">
+
+            <div class="left">
+
+                <div class="newWidget grid-stack-item ">
+                    <div class="card-body grid-stack-item-content">
+                      <div>
+                        <ion-icon name="add" style="font-size: 200%"></ion-icon>
+                      </div>
+                      <div>
+                        <span>New Widget</span>
+                      </div>
+                    </div>
+                </div>
+
+                <div id="trash" style="padding: 15px; margin-bottom: 15px;" class="text-center">
+                    <div>
+                      <ion-icon name="trash" style="font-size: 200%"></ion-icon>
+                    </div>
+                    <div>
+                      <span>Drop here to remove widget!</span>
+                    </div>
+                </div>
+
+                <div class="list" id="chartList"></div>
+               
+
+            </div>
+
+            <div class="right">
+                  <h5>Drag a Widget</h5>
+                  <div class="grid-stack" id="gridStack" data-gs-animate="yes">
+                    <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="4" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-1"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4">
+                      <div class="grid-stack-item-content list cParent" id="spot-2"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="8" data-gs-y="0" data-gs-width="2" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-3"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="10" data-gs-y="0" data-gs-width="2" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-4"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" data-gs-width="2" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-5"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="2" data-gs-y="2" data-gs-width="2" data-gs-height="4">
+                      <div class="grid-stack-item-content list cParent" id="spot-6"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="8" data-gs-y="2" data-gs-width="4" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-7"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="0" data-gs-y="4" data-gs-width="2" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-8"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="4" data-gs-y="4" data-gs-width="4" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-9"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="8" data-gs-y="4" data-gs-width="2" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-10"></div>
+                    </div>
+                    <div class="grid-stack-item" data-gs-x="10" data-gs-y="4" data-gs-width="2" data-gs-height="2">
+                      <div class="grid-stack-item-content list cParent" id="spot-11"></div>
+                    </div>
+                  </div>
+
+                  <button class="btn" id="saveBtn">Save</button>
+                  <button class="btn"  id="tempBtn">Template</button>
+                  <button class="btn" style="display: none;"  id="clearBtn">clear</button>
+
+              </div>
+              
+          </div>
+      </section>
+
+    <script  src="chartData.js"></script>
+    <script src="chart.js" type="text/javascript"></script>
+    <script src="node_modules/gridstack/dist/gridstack.all.js"></script>
+
+    <script src="main.js" type="text/javascript"></script>
+    <script src="nav/nav.js" type="text/javascript"></script>
+</body>
+</html>
